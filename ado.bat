@@ -1,0 +1,1 @@
+c:\gstreamer\1.0\msvc_x86_64\bin\gst-launch-1.0.exe -v -m wasapisrc ! "audio/x-raw,format={F32LE},rate=48000,channels=2" ! audioconvert ! audiocheblimit mode=low-pass cutoff=3200 poles=2 ! audioconvert ! audioresample ! "audio/x-raw,format={S16LE},rate=11025,channels=1" ! udpsink host=HOST port=3000
